@@ -13,6 +13,7 @@ package object types {
   type Name = String
   type ShippingTime = Int
   type Signature = String
+  type Percentage = Double
   type Timestamp = DateTime
   type Quality = Int
   type PrimeOffer = Boolean
