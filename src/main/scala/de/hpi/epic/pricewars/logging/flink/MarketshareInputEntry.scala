@@ -7,7 +7,7 @@ import de.hpi.epic.pricewars.types._
 /**
   * Created by Jan on 13.12.2016.
   */
-class MarketshareInputEntry(val merchant_id: ID, val amount: Amount) extends AmountEntry with MerchantIDEntry
+class MarketshareInputEntry(val merchant_id: Token, val amount: Amount) extends AmountEntry with MerchantIDEntry
 
 object MarketshareInputEntry {
   def from(entry: BuyOfferEntry): MarketshareInputEntry = new MarketshareInputEntry(entry.merchant_id, entry.amount)

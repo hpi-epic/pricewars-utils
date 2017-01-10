@@ -10,6 +10,7 @@ package object types {
   type Currency = BigDecimal
   type HttpCode = Int
   type ID = Long
+  type Token = String
   type Name = String
   type ShippingTime = Int
   type Signature = String
