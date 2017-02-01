@@ -1,6 +1,6 @@
 package de.hpi.epic.pricewars.logging.producer
 
-import de.hpi.epic.pricewars.logging.base.{AmountEntry, MerchantIDEntry}
+import de.hpi.epic.pricewars.logging.base.{AmountEntry, MerchantIDEntry, PriceEntry, TimestampEntry}
 import de.hpi.epic.pricewars.types._
 
 /**
@@ -8,4 +8,4 @@ import de.hpi.epic.pricewars.types._
   */
 case class NewProductEntry (uid: ID, product_id: ID, name: Name, quality: Quality, price: Currency, amount: Amount,
                             signature: Signature, merchant_id: Token, timestamp: Timestamp)
-  extends MerchantIDEntry with AmountEntry
+  extends MerchantIDEntry with AmountEntry with PriceEntry with TimestampEntry

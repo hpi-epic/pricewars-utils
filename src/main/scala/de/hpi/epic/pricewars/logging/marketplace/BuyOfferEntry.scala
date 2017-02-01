@@ -1,6 +1,6 @@
 package de.hpi.epic.pricewars.logging.marketplace
 
-import de.hpi.epic.pricewars.logging.base.{AmountEntry, MerchantIDEntry}
+import de.hpi.epic.pricewars.logging.base.{AmountEntry, MerchantIDEntry, PriceEntry, TimestampEntry}
 import de.hpi.epic.pricewars.types._
 
 /**
@@ -8,4 +8,4 @@ import de.hpi.epic.pricewars.types._
   */
 case class BuyOfferEntry(offer_id: ID, merchant_id: Token, amount: Amount, price: Currency,
                          http_code: HttpCode, timestamp: Timestamp)
-  extends java.io.Serializable with MerchantIDEntry with AmountEntry
+  extends java.io.Serializable with MerchantIDEntry with AmountEntry with PriceEntry with TimestampEntry
