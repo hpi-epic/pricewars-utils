@@ -6,9 +6,9 @@ import de.hpi.epic.pricewars.types._
 /**
   * Created by Jan on 31.01.2017.
   */
-case class RevenueEntry (merchant_id: Token, profit: Currency, timestamp: Timestamp) extends MerchantIDEntry
+case class RevenueEntry (merchant_id: Token, revenue: Currency, timestamp: Timestamp) extends MerchantIDEntry
   with ValueEntry[Currency] with TimestampEntry {
-  override def value: Currency = profit
+  override def value: Currency = revenue
 }
 
 object RevenueEntry {
