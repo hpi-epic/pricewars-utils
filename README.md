@@ -22,9 +22,6 @@ This means, that there are no specific requirements for this repository as it is
 Like mentioned in the previous section, this repository only contains shared source code.
 To use it in a Scala service, this repository has to be used as a git submodule and in the using project's sbt build file a project reference to the project defined in this repositories sbt build file has to be added.
 
-## Configuration
-Accordingly, this repository has no configuration parts.
-
 ## Concept
 The intention of this repository is to have a common base for the serialized data that is stored in kafka for the parts that are developed in Scala.
 The idea was to reduce the code duplication and potential errors by sharing the definition of how the data is stored between the marketplace service, which sends these as log entries to the shared log, and the flink jobs, which consume these log entries.
